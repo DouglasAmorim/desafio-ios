@@ -90,6 +90,10 @@ class TextFieldComponent: UIView {
     func setupTitle(_ attributedText: NSAttributedString) {
         self.titleLabel.attributedText = attributedText
     }
+    
+    func getTextFieldText() -> String? {
+        return self.textField.text
+    }
 }
 
 extension TextFieldComponent: UITextFieldDelegate {

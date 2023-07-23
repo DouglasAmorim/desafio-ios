@@ -33,6 +33,18 @@ class CharacterFilterView: UIView {
     }()
     
     // MARK: Public Attributes
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(RoundedLabelCell.self, forCellWithReuseIdentifier: RoundedLabelCell.identifier)
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        
+        return collection
+    }()
+    
     weak var delegate: CharacterFilterViewProtocol?
     
     // MARK: Initializers
@@ -54,9 +66,9 @@ class CharacterFilterView: UIView {
     }
     
     private func addSubviews() {
-        self.addSubview(nameTextField)
-        self.addSubview(filterButton)
-        
+        self.addSubview(self.nameTextField)
+        self.addSubview(self.collectionView)
+        self.addSubview(self.filterButton)
     }
     
     private func configureConstraints() {
@@ -64,6 +76,11 @@ class CharacterFilterView: UIView {
         self.nameTextField.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 24).isActive = true
         self.nameTextField.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -24).isActive = true
         self.nameTextField.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        
+        self.collectionView.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor, constant: 24).isActive = true
+        self.collectionView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 24).isActive = true
+        self.collectionView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: 24).isActive = true
+        self.collectionView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         self.filterButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 24).isActive = true
         self.filterButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -24).isActive = true

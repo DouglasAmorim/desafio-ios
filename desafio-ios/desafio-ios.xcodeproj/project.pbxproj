@@ -15,6 +15,8 @@
 		E85543742A6D60F00042B4D2 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */; };
 		E85543762A6D711D0042B4D2 /* CharacterFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543752A6D711D0042B4D2 /* CharacterFilterViewController.swift */; };
 		E85543782A6D71BC0042B4D2 /* CharacterFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543772A6D71BC0042B4D2 /* CharacterFilterViewModel.swift */; };
+		E855437B2A6D798C0042B4D2 /* CharacterStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855437A2A6D798C0042B4D2 /* CharacterStatusEnum.swift */; };
+		E855437E2A6D7A440042B4D2 /* RoundedLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855437D2A6D7A440042B4D2 /* RoundedLabelCell.swift */; };
 		E8BD5A3E2A6CC8FF008B61F4 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */; };
 		E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */; };
 		E8BD5A422A6CC92F008B61F4 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */; };
@@ -76,6 +78,8 @@
 		E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		E85543752A6D711D0042B4D2 /* CharacterFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewController.swift; sourceTree = "<group>"; };
 		E85543772A6D71BC0042B4D2 /* CharacterFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewModel.swift; sourceTree = "<group>"; };
+		E855437A2A6D798C0042B4D2 /* CharacterStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStatusEnum.swift; sourceTree = "<group>"; };
+		E855437D2A6D7A440042B4D2 /* RoundedLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabelCell.swift; sourceTree = "<group>"; };
 		E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		E85543702A6D604F0042B4D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E855437C2A6D7A130042B4D2 /* CollectionViewCell */,
 				E85543712A6D60C50042B4D2 /* TextField */,
 			);
 			path = Components;
@@ -248,6 +253,22 @@
 				E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		E85543792A6D797C0042B4D2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E855437A2A6D798C0042B4D2 /* CharacterStatusEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E855437C2A6D7A130042B4D2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E855437D2A6D7A440042B4D2 /* RoundedLabelCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		E8BD5A392A6CC8D2008B61F4 /* CharacterDetail */ = {
@@ -367,6 +388,7 @@
 		E8D78D662A6C689A007149F4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E85543792A6D797C0042B4D2 /* Enums */,
 				E85543702A6D604F0042B4D2 /* Components */,
 				E8D78D8B2A6C8E3F007149F4 /* Extension */,
 				E8D78D6D2A6C6AEC007149F4 /* Error */,
@@ -729,11 +751,13 @@
 			files = (
 				E8D78D762A6C6FA9007149F4 /* CharacterResponse.swift in Sources */,
 				E8D78D622A6C663A007149F4 /* CharacterService.swift in Sources */,
+				E855437E2A6D7A440042B4D2 /* RoundedLabelCell.swift in Sources */,
 				E8D78D322A6C59C8007149F4 /* ViewController.swift in Sources */,
 				E8D78D2E2A6C59C8007149F4 /* AppDelegate.swift in Sources */,
 				E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */,
 				E8D78D8D2A6C8E50007149F4 /* UIColorExtension.swift in Sources */,
 				E8D78D8A2A6C895B007149F4 /* CharacterListViewModel.swift in Sources */,
+				E855437B2A6D798C0042B4D2 /* CharacterStatusEnum.swift in Sources */,
 				E85543742A6D60F00042B4D2 /* TextFieldComponent.swift in Sources */,
 				E8D78D6F2A6C6AFB007149F4 /* ErrorCustom.swift in Sources */,
 				E8D78D7A2A6C74F9007149F4 /* CharacterInfoResponse.swift in Sources */,
