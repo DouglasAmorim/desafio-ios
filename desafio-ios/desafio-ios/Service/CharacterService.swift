@@ -18,7 +18,6 @@ class CharacterService {
             ]
         }
         
-        print("ALAMOFIRE \(Endpoints.character)")
         CustomRequestInterceptor.shared.manager.request(Endpoints.character, parameters: parameter, encoding: URLEncoding.default)
             .handleResponse({ response in
                 

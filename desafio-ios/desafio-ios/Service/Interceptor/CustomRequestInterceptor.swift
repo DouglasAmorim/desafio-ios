@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class CustomRequestInterceptor: RequestInterceptor {
-
     static let TIMEOUT: TimeInterval = 120
     static let shared = CustomRequestInterceptor()
     
@@ -25,7 +24,6 @@ class CustomRequestInterceptor: RequestInterceptor {
     func adapt(_ urlRequest: URLRequest, for session: Alamofire.Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         
         // Configure Authorization Token IF NEEDED
-        print(" ADAPTER \(urlRequest.url)")
         completion(.success(urlRequest))
     }
     

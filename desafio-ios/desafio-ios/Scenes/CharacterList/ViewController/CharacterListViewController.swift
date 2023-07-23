@@ -97,7 +97,8 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
             let character = characters[indexPath.row]
                   
             // TODO: Externalizar Strings
-            let attributedText = NSAttributedString(string: character.getName() ?? "UNKNOWN NAME", attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+            let characterName = (character.getName() != "") ? character.getName() ?? NSLocalizedString("UNKNOWN", comment: "") : NSLocalizedString("UNKNOWN", comment: "")
+            let attributedText = NSAttributedString(string: characterName, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
             
             if let imageLink = character.getImage() {
                 DispatchQueue.global(qos: .background).async {

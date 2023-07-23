@@ -43,25 +43,26 @@ class CharacterDetailViewController: UIViewController {
             return
         }
         
-        let nameAttributedText = NSAttributedString(string: (character.getName() ?? "UNKNOWN NAME"), attributes: [.font: UIFont.systemFont(ofSize: 36), .foregroundColor: UIColor.black])
+        let characterName = (character.getName() != "") ? character.getName() ?? NSLocalizedString("UNKNOWN", comment: "") : NSLocalizedString("UNKNOWN", comment: "")
+        let nameAttributedText = NSAttributedString(string: characterName, attributes: [.font: UIFont.systemFont(ofSize: 36), .foregroundColor: UIColor.black])
         
-        let statusLocalizedString = String(format: NSLocalizedString("DETAIL_STATUS", comment: ""), character.getStatus() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let statusAttributedText = NSAttributedString(string: statusLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterStatus = (character.getStatus() != "") ? String(format: NSLocalizedString("DETAIL_STATUS", comment: ""), character.getStatus() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_STATUS", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let statusAttributedText = NSAttributedString(string: characterStatus, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
-        let speciesLocalizedString = String(format: NSLocalizedString("DETAIL_SPECIES", comment: ""), character.getSpecies() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let speciesAttributedText = NSAttributedString(string: speciesLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterSpecies = (character.getSpecies() != "") ? String(format: NSLocalizedString("DETAIL_SPECIES", comment: ""), character.getSpecies() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_SPECIES", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let speciesAttributedText = NSAttributedString(string: characterSpecies, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
-        let typeLocalizedString = String(format: NSLocalizedString("DETAIL_TYPE", comment: ""), character.getType() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let typeAttributedText = NSAttributedString(string: typeLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterType = (character.getType() != "") ? String(format: NSLocalizedString("DETAIL_TYPE", comment: ""), character.getType() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_TYPE", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let typeAttributedText = NSAttributedString(string: characterType, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
-        let genderLocalizedString = String(format: NSLocalizedString("DETAIL_GENDER", comment: ""), character.getGender() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let genderAttributedText = NSAttributedString(string: genderLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterGender = (character.getGender() != "") ? String(format: NSLocalizedString("DETAIL_GENDER", comment: ""), character.getGender() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_GENDER", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let genderAttributedText = NSAttributedString(string: characterGender, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
-        let originLocalizedString = String(format: NSLocalizedString("DETAIL_ORIGIN", comment: ""),  character.getOrigin()?.getName() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let originAttributedText = NSAttributedString(string: originLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterOrigin = (character.getOrigin()?.getName() != "") ? String(format: NSLocalizedString("DETAIL_ORIGIN", comment: ""), character.getOrigin()?.getName() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_ORIGIN", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let originAttributedText = NSAttributedString(string: characterOrigin, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
-        let locationLocalizedString = String(format: NSLocalizedString("DETAIL_LOCATION", comment: ""),  character.getLocation()?.getName() ?? NSLocalizedString("UNKNOWN", comment: ""))
-        let locationAttributedText = NSAttributedString(string: locationLocalizedString, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
+        let characterLocation = (character.getLocation()?.getName() != "") ? String(format: NSLocalizedString("DETAIL_LOCATION", comment: ""), character.getLocation()?.getName() ?? NSLocalizedString("UNKNOWN", comment: "")) : String(format: NSLocalizedString("DETAIL_LOCATION", comment: ""), NSLocalizedString("UNKNOWN", comment: ""))
+        let locationAttributedText = NSAttributedString(string: characterLocation, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
         
         if let imageLink = character.getImage() {
             DispatchQueue.global(qos: .background).async {

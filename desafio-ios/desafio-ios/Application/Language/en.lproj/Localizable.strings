@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  desafio-ios
+
+  Created by Douglas Amorim on 23/07/23.
+  
+*/
+
+"UNKNOWN" = "Unknown";
+"DETAIL_STATUS" = "Character Status: %@";
+"DETAIL_SPECIES" = "Character Specie: %@";
+"DETAIL_TYPE" = "Character Type: %@";
+"DETAIL_GENDER" = "Character Gender: %@";
+"DETAIL_ORIGIN" = "Character Origin: %@";
+"DETAIL_LOCATION" = "Character Location: %@";
