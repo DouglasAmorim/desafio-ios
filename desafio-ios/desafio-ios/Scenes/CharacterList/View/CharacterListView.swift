@@ -35,7 +35,7 @@ class CharacterListView: UIView {
     
     // MARK: Private Methods
     private func configureLayout() {
-        self.backgroundColor = UIColor(hex: "#D7F2BEFF")
+        self.backgroundColor = .white
         self.addSubviews()
         self.configureConstraints()
     }

@@ -17,7 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         let viewModel = CharacterListViewModel(characterService: CharacterService())
-        window.rootViewController = CharacterListViewController(viewModel: viewModel)
+        let viewController = CharacterListViewController(viewModel: viewModel)
+        
+        let navigationController = UINavigationController()
+         navigationController.pushViewController(viewController, animated: false)
+        
+        window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
     }

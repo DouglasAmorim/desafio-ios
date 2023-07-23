@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class CharacterListViewController: UIViewController {
+    // MARK: Private Attributes
     private let characterListView = CharacterListView()
     private var characters: [CharacterInfoResponse] = []
     private var viewModel: CharacterListViewModelProtocol?
@@ -30,15 +31,8 @@ class CharacterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configureTableView()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         self.getCharacterList()
-        // TODO: Call Get list characters
     }
     
     // MARK: Private Methods
@@ -77,6 +71,13 @@ class CharacterListViewController: UIViewController {
             }
             
         })
+    }
+    
+    private func openCharacterDetail(character: CharacterInfoResponse) {
+        let characterDetailViewModel = CharacterDetailViewModel()
+        let characterDetailViewController = CharacterDetailViewController(character: character, viewModel: characterDetailViewModel)
+        characterDetailViewController.modalPresentationStyle = .overFullScreen
+        navigationController?.pushViewController(characterDetailViewController, animated: true)
     }
 }
 
@@ -124,6 +125,7 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement Click
+        let character = self.characters[indexPath.row]
+        self.openCharacterDetail(character: character)
     }
 }

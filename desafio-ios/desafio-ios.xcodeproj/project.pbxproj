@@ -10,6 +10,9 @@
 		9238B216E4B892BF358C750C /* Pods_desafio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B00EEA7ABF0D0C22A5944F /* Pods_desafio_iosTests.framework */; };
 		98DA18148DA6DD751BC82BAC /* Pods_desafio_ios_desafio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BAE807CAC4F4B4398EF5EA /* Pods_desafio_ios_desafio_iosUITests.framework */; };
 		B1B66461A1E90D902C96B379 /* Pods_desafio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B7BD5F48388AEFCC3F9B74 /* Pods_desafio_ios.framework */; };
+		E8BD5A3E2A6CC8FF008B61F4 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */; };
+		E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */; };
+		E8BD5A422A6CC92F008B61F4 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */; };
 		E8D78D2E2A6C59C8007149F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D2D2A6C59C8007149F4 /* AppDelegate.swift */; };
 		E8D78D302A6C59C8007149F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D2F2A6C59C8007149F4 /* SceneDelegate.swift */; };
 		E8D78D322A6C59C8007149F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D312A6C59C8007149F4 /* ViewController.swift */; };
@@ -63,6 +66,9 @@
 		AA35EFC622B0C3787B007991 /* Pods-desafio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-iosTests/Pods-desafio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0BAE807CAC4F4B4398EF5EA /* Pods_desafio_ios_desafio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios_desafio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B405E260C86DDA33176683 /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		E8D78D2A2A6C59C8007149F4 /* desafio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D78D2D2A6C59C8007149F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D78D2F2A6C59C8007149F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,40 @@
 				F801CC173B8F3880358408F4 /* Pods-desafio-iosTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8BD5A392A6CC8D2008B61F4 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E8BD5A3C2A6CC8E8008B61F4 /* ViewModel */,
+				E8BD5A3B2A6CC8E1008B61F4 /* ViewController */,
+				E8BD5A3A2A6CC8DB008B61F4 /* View */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		E8BD5A3A2A6CC8DB008B61F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8BD5A3B2A6CC8E1008B61F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E8BD5A3C2A6CC8E8008B61F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E8D78D212A6C59C8007149F4 = {
@@ -295,6 +335,7 @@
 		E8D78D7D2A6C7971007149F4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E8BD5A392A6CC8D2008B61F4 /* CharacterDetail */,
 				E8D78D7E2A6C7A0F007149F4 /* CharacterList */,
 			);
 			path = Scenes;
@@ -594,6 +635,7 @@
 				E8D78D622A6C663A007149F4 /* CharacterService.swift in Sources */,
 				E8D78D322A6C59C8007149F4 /* ViewController.swift in Sources */,
 				E8D78D2E2A6C59C8007149F4 /* AppDelegate.swift in Sources */,
+				E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */,
 				E8D78D8D2A6C8E50007149F4 /* UIColorExtension.swift in Sources */,
 				E8D78D8A2A6C895B007149F4 /* CharacterListViewModel.swift in Sources */,
 				E8D78D6F2A6C6AFB007149F4 /* ErrorCustom.swift in Sources */,
@@ -605,6 +647,8 @@
 				E8D78D692A6C68AE007149F4 /* AppConstants.swift in Sources */,
 				E8D78D6C2A6C69D0007149F4 /* DataRequestExtension.swift in Sources */,
 				E8D78D862A6C7E84007149F4 /* CharacterCell.swift in Sources */,
+				E8BD5A3E2A6CC8FF008B61F4 /* CharacterDetailView.swift in Sources */,
+				E8BD5A422A6CC92F008B61F4 /* CharacterDetailViewModel.swift in Sources */,
 				E8D78D782A6C71EC007149F4 /* InformationResponse.swift in Sources */,
 				E8D78D832A6C7A45007149F4 /* CharacterListView.swift in Sources */,
 				E8D78D652A6C6793007149F4 /* Endpoints.swift in Sources */,

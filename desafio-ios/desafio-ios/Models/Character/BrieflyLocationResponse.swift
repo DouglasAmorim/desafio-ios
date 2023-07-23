@@ -20,4 +20,13 @@ class BrieflyLocationResponse: Codable, Equatable {
         return lhs.name == rhs.name &&
         lhs.url == rhs.url
     }
+    
+    // MARK: Public Methods
+    func getName() -> String? {
+        return name
+    }
+    
+    func getUrl() -> String? {
+        return url
+    }
 }
