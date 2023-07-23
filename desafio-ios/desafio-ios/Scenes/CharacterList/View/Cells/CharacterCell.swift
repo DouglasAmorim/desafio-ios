@@ -69,8 +69,11 @@ class CharacterCell: UITableViewCell {
     }
     
     // MARK: Public Methods
-    func setupCell(characterImage: UIImage, characterAttributedText: NSAttributedString) {
-        self.characterImageView.image = characterImage
+    func setupCell(characterImage: UIImage? = nil, characterAttributedText: NSAttributedString) {
+        if let characterImage = characterImage {
+            self.characterImageView.image = characterImage
+        }
+        
         self.characterNameLabel.attributedText = characterAttributedText
     }
 }

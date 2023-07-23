@@ -7,13 +7,9 @@
 
 import Foundation
 
-protocol CharacterDetailViewModelProtocol: AnyObject {
-}
+protocol CharacterDetailViewModelProtocol: AnyObject { }
 
 class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
-
     // MARK: Initializers
-    init() {
-        
-    }
+    init() {}
 }

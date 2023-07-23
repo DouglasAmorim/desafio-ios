@@ -15,6 +15,7 @@ class CharacterListViewController: UIViewController {
     private var filteredCharacters: [CharacterInfoResponse] = []
     private var listIsFiltered: Bool = false
     private var viewModel: CharacterListViewModelProtocol?
+    private let refreshControl = UIRefreshControl()
     
     // MARK: Initializers
     public init(viewModel: CharacterListViewModelProtocol) {
@@ -56,6 +57,9 @@ class CharacterListViewController: UIViewController {
     private func configureTableView() {
         self.characterListView.tableView.delegate = self
         self.characterListView.tableView.dataSource = self
+       
+        self.refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        self.characterListView.tableView.addSubview(refreshControl)
         
         self.characterListView.tableView.register(CharacterCell.self, forCellReuseIdentifier: CharacterCell.identifier)
     }
@@ -80,6 +84,7 @@ class CharacterListViewController: UIViewController {
                         self.getCharacterList(characterFilter: characterFilter)
                         
                     } else {
+                        self.refreshControl.endRefreshing()
                         self.characterListView.tableView.reloadData()
                     }
                 }
@@ -117,6 +122,10 @@ class CharacterListViewController: UIViewController {
         self.navigationItem.rightBarButtonItem?.isEnabled = true
         self.navigationItem.leftBarButtonItem?.isEnabled = false
         self.characterListView.tableView.reloadData()
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+        self.getCharacterList()
     }
 }
 
@@ -159,7 +168,9 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
                               cell.setupCell(characterImage: image, characterAttributedText: attributedText)
                           }
                     } catch {
-                        // error
+                        DispatchQueue.main.async {
+                            cell.setupCell(characterAttributedText: attributedText)
+                        }
                     }
                 }
             }

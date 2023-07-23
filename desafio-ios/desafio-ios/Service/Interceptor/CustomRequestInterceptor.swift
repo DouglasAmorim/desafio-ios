@@ -16,7 +16,19 @@ class CustomRequestInterceptor: RequestInterceptor {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = CustomRequestInterceptor.TIMEOUT
         
-        let manager = Session(configuration: configuration, delegate: Session.default.delegate, interceptor: self)
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        
+        let responseCacher = ResponseCacher(behavior: .modify { _ , response in
+          let userInfo = ["date": Date()]
+            
+          return CachedURLResponse(
+            response: response.response,
+            data: response.data,
+            userInfo: userInfo,
+            storagePolicy: .allowed)
+        })
+        
+        let manager = Session(configuration: configuration, delegate: Session.default.delegate, interceptor: self, cachedResponseHandler: responseCacher)
         
         return manager
     }()

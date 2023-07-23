@@ -20,6 +20,7 @@ class CharacterFilterViewModel: CharacterFilterViewModelProtocol {
     }
     
     func getCharacterFilterList(characterFilter: CharacterFilter, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
+        // TODO: Create a LOADING
         self.characterService.getCharacterList(characterFilter: characterFilter, { response in
             result(response)
         })
