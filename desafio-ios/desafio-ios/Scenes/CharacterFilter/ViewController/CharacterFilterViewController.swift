@@ -8,12 +8,20 @@
 import Foundation
 import UIKit
 
+protocol CharacterFilterViewControllerProtocol: AnyObject {
+    func finishedFilterCharacters(filteredList: [CharacterInfoResponse])
+}
+
 class CharacterFilterViewController: UIViewController {
     // MARK: Private Attributes
     private var characterFilterView = CharacterFilterView()
     private var viewModel: CharacterFilterViewModelProtocol?
     private let characterStatus = [CharacterStatusEnum.ALIVE, CharacterStatusEnum.DEAD, CharacterStatusEnum.UNKNOWN]
     private var statusSelected: Int? = nil
+    private var charactersFiltred: [CharacterInfoResponse] = []
+    
+    // MARK: Public Attributes
+    weak var delegate: CharacterFilterViewControllerProtocol?
     
     // MARK: Initializers
     public init(viewModel: CharacterFilterViewModelProtocol) {
@@ -56,11 +64,59 @@ class CharacterFilterViewController: UIViewController {
         
         self.characterFilterView.setupTitleTextField(attributedText)
     }
+    
+    private func getCharacterFilterList(characterFilter: CharacterFilter = CharacterFilter()) {
+        guard let viewModel = viewModel else { return }
+        
+        viewModel.getCharacterFilterList(characterFilter: characterFilter, { result in
+            var page: Int =  Int(characterFilter.getPage()) ?? 0
+            
+            switch result {
+            case .success(let characterResponse):
+                
+                if let characters = characterResponse.getCharacterList() {
+                    self.charactersFiltred.append(contentsOf: characters)
+                }
+                
+                if let pageAmount = characterResponse.getInformationResponse()?.getPageAmount() {
+                    if page < pageAmount {
+                        page += 1
+                        characterFilter.setPage(page: String(page))
+                        self.getCharacterFilterList(characterFilter: characterFilter)
+                        
+                    } else {
+                        self.finishedFilterCharacters()
+                    }
+                }
+                
+            case .failure(let erro):
+                // TODO: Tratar cenario de erro
+                break
+            }
+        })
+    }
+    
+    private func finishedFilterCharacters() {
+        navigationController?.popViewController(animated: true)
+        self.delegate?.finishedFilterCharacters(filteredList: self.charactersFiltred)
+    }
 }
 
 extension CharacterFilterViewController: CharacterFilterViewProtocol {
     func tapFilterButton() {
-        // TODO: 
+        let characterFilter = CharacterFilter()
+        
+        if let statusSelected = self.statusSelected {
+            characterFilter.setStatus(status: self.characterStatus[statusSelected].rawValue)
+        }
+        
+        if let name = self.characterFilterView.getTextFieldText() {
+            characterFilter.setName(name: name)
+        }
+        
+        if (characterFilter.getName() != "") || (characterFilter.getStatus() != "") {
+            self.getCharacterFilterList(characterFilter: characterFilter)
+        }
     }
 }
 

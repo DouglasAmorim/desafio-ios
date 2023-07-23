@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterFilterViewModelProtocol: AnyObject {
-    func getCharacterFilterList(page: Int, name: String, status: String, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void)
+    func getCharacterFilterList(characterFilter: CharacterFilter, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void)
 }
 
 class CharacterFilterViewModel: CharacterFilterViewModelProtocol {
@@ -19,7 +19,9 @@ class CharacterFilterViewModel: CharacterFilterViewModelProtocol {
         self.characterService = characterService
     }
     
-    func getCharacterFilterList(page: Int, name: String, status: String, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
-        
+    func getCharacterFilterList(characterFilter: CharacterFilter, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
+        self.characterService.getCharacterList(characterFilter: characterFilter, { response in
+            result(response)
+        })
     }
 }

@@ -100,4 +100,8 @@ class CharacterFilterView: UIView {
     func setupTitleTextField(_ attributedText: NSAttributedString) {
         self.nameTextField.setupTitle(attributedText)
     }
+    
+    func getTextFieldText() -> String? {
+        return self.nameTextField.getTextFieldText()
+    }
 }

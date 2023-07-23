@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterListViewModelProtocol: AnyObject {
-    func getCharacterList(page: Int, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void)
+    func getCharacterList(characterFilter: CharacterFilter, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void)
 }
 
 class CharacterListViewModel: CharacterListViewModelProtocol {
@@ -19,16 +19,10 @@ class CharacterListViewModel: CharacterListViewModelProtocol {
         self.characterService = characterService
     }
     
-    func getCharacterList(page: Int = 1, _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
+    func getCharacterList(characterFilter: CharacterFilter = CharacterFilter(), _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
         
-        self.characterService.getCharacterList(page: String(page), { response in
-            switch response {
-            case .success(let characterResponse):
-                result(.success(characterResponse))
-                
-            case .failure(let errorCustom):
-                break
-            }
+        self.characterService.getCharacterList(characterFilter: characterFilter, { response in
+            result(response)
         })
     }
 }

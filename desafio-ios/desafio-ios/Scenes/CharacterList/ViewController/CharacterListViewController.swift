@@ -12,6 +12,8 @@ class CharacterListViewController: UIViewController {
     // MARK: Private Attributes
     private let characterListView = CharacterListView()
     private var characters: [CharacterInfoResponse] = []
+    private var filteredCharacters: [CharacterInfoResponse] = []
+    private var listIsFiltered: Bool = false
     private var viewModel: CharacterListViewModelProtocol?
     
     // MARK: Initializers
@@ -41,9 +43,14 @@ class CharacterListViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         self.title = NSLocalizedString("CHARACTER_TITLE", comment: "")
         
-        let barButtonItem = UIBarButtonItem(title: NSLocalizedString("FILTER", comment: ""), style: .plain, target: self, action: #selector(filterTapped))
+        let rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("FILTER", comment: ""), style: .plain, target: self, action: #selector(filterTapped))
         
-        navigationItem.rightBarButtonItem = barButtonItem
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        let leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("CANCEL", comment: ""), style: .plain, target: self, action: #selector(cancelFilterTapped))
+        
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        navigationItem.leftBarButtonItem?.isEnabled = false
     }
     
     private func configureTableView() {
@@ -53,11 +60,11 @@ class CharacterListViewController: UIViewController {
         self.characterListView.tableView.register(CharacterCell.self, forCellReuseIdentifier: CharacterCell.identifier)
     }
     
-    private func getCharacterList(page: Int = 1) {
+    private func getCharacterList(characterFilter: CharacterFilter = CharacterFilter()) {
         guard let viewModel = viewModel else { return }
         
-        viewModel.getCharacterList(page: page, { result in
-            var page: Int = page
+        viewModel.getCharacterList(characterFilter: characterFilter, { result in
+            var page: Int =  Int(characterFilter.getPage()) ?? 0
             
             switch result {
             case .success(let characterResponse):
@@ -69,7 +76,9 @@ class CharacterListViewController: UIViewController {
                 if let pageAmount = characterResponse.getInformationResponse()?.getPageAmount() {
                     if page < pageAmount {
                         page += 1
-                        self.getCharacterList(page: page)
+                        characterFilter.setPage(page: String(page))
+                        self.getCharacterList(characterFilter: characterFilter)
+                        
                     } else {
                         self.characterListView.tableView.reloadData()
                     }
@@ -93,18 +102,37 @@ class CharacterListViewController: UIViewController {
         let characterFilterViewModel = CharacterFilterViewModel(characterService: CharacterService())
         let characterFilterViewController = CharacterFilterViewController(viewModel: characterFilterViewModel)
         
+        characterFilterViewController.delegate = self
         characterFilterViewController.modalPresentationStyle = .overFullScreen
+        
         navigationController?.pushViewController(characterFilterViewController, animated: true)
     }
     
     @objc private func filterTapped() {
         self.openCharacterFilter()
     }
+    
+    @objc private func cancelFilterTapped() {
+        self.listIsFiltered = false
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        self.characterListView.tableView.reloadData()
+    }
+}
+
+extension CharacterListViewController: CharacterFilterViewControllerProtocol {
+    func finishedFilterCharacters(filteredList: [CharacterInfoResponse]) {
+        self.filteredCharacters = filteredList
+        self.listIsFiltered = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        self.navigationItem.leftBarButtonItem?.isEnabled = true
+        self.characterListView.tableView.reloadData()
+    }
 }
 
 extension CharacterListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters.count
+        return self.listIsFiltered ? self.filteredCharacters.count : self.characters.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -115,7 +143,7 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
         if let cell = tableView.dequeueReusableCell(withIdentifier: CharacterCell.identifier, for: indexPath) as? CharacterCell {
             
             // TODO: Use SAFE
-            let character = characters[indexPath.row]
+            let character = self.listIsFiltered ? self.filteredCharacters[indexPath.row] : characters[indexPath.row]
                   
             let characterName = (character.getName() != "") ? character.getName() ?? NSLocalizedString("UNKNOWN", comment: "") : NSLocalizedString("UNKNOWN", comment: "")
             let attributedText = NSAttributedString(string: characterName, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
@@ -145,7 +173,7 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let character = self.characters[indexPath.row]
+        let character = self.listIsFiltered ? self.filteredCharacters[indexPath.row] : self.characters[indexPath.row]
         self.openCharacterDetail(character: character)
     }
 }
