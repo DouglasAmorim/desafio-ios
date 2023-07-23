@@ -13,3 +13,9 @@
 "DETAIL_GENDER" = "Character Gender: %@";
 "DETAIL_ORIGIN" = "Character Origin: %@";
 "DETAIL_LOCATION" = "Character Location: %@";
+"CHARACTER_TITLE" = "Characters";
+"FILTER" = "Filter";
+"TEXT_FIELD_FILTER_NAME" = "Name";
+"FILTER_BUTTON" = "FILTER";
+"CHARACTER_FILTER_TITLE" = "Filter";
+"CHARACTER_DETAIL_TITLE" = "Detail";

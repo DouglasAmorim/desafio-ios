@@ -11,6 +11,10 @@
 		98DA18148DA6DD751BC82BAC /* Pods_desafio_ios_desafio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BAE807CAC4F4B4398EF5EA /* Pods_desafio_ios_desafio_iosUITests.framework */; };
 		B1B66461A1E90D902C96B379 /* Pods_desafio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B7BD5F48388AEFCC3F9B74 /* Pods_desafio_ios.framework */; };
 		E85543672A6D51160042B4D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E85543692A6D51160042B4D2 /* Localizable.strings */; };
+		E855436F2A6D5F6C0042B4D2 /* CharacterFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */; };
+		E85543742A6D60F00042B4D2 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */; };
+		E85543762A6D711D0042B4D2 /* CharacterFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543752A6D711D0042B4D2 /* CharacterFilterViewController.swift */; };
+		E85543782A6D71BC0042B4D2 /* CharacterFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85543772A6D71BC0042B4D2 /* CharacterFilterViewModel.swift */; };
 		E8BD5A3E2A6CC8FF008B61F4 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */; };
 		E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */; };
 		E8BD5A422A6CC92F008B61F4 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */; };
@@ -68,6 +72,10 @@
 		D0BAE807CAC4F4B4398EF5EA /* Pods_desafio_ios_desafio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios_desafio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B405E260C86DDA33176683 /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E85543682A6D51160042B4D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterView.swift; sourceTree = "<group>"; };
+		E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		E85543752A6D711D0042B4D2 /* CharacterFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewController.swift; sourceTree = "<group>"; };
+		E85543772A6D71BC0042B4D2 /* CharacterFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewModel.swift; sourceTree = "<group>"; };
 		E8BD5A3D2A6CC8FF008B61F4 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		E8BD5A3F2A6CC912008B61F4 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		E8BD5A412A6CC92F008B61F4 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +200,56 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
+		E855436A2A6D5F1D0042B4D2 /* CharacterFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E855436D2A6D5F330042B4D2 /* ViewModel */,
+				E855436C2A6D5F2C0042B4D2 /* ViewController */,
+				E855436B2A6D5F270042B4D2 /* View */,
+			);
+			path = CharacterFilter;
+			sourceTree = "<group>";
+		};
+		E855436B2A6D5F270042B4D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E855436C2A6D5F2C0042B4D2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E85543752A6D711D0042B4D2 /* CharacterFilterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E855436D2A6D5F330042B4D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E85543772A6D71BC0042B4D2 /* CharacterFilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E85543702A6D604F0042B4D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E85543712A6D60C50042B4D2 /* TextField */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E85543712A6D60C50042B4D2 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				E85543732A6D60F00042B4D2 /* TextFieldComponent.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		E8BD5A392A6CC8D2008B61F4 /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +367,7 @@
 		E8D78D662A6C689A007149F4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E85543702A6D604F0042B4D2 /* Components */,
 				E8D78D8B2A6C8E3F007149F4 /* Extension */,
 				E8D78D6D2A6C6AEC007149F4 /* Error */,
 				E8D78D672A6C68A2007149F4 /* Constants */,
@@ -370,6 +429,7 @@
 		E8D78D7D2A6C7971007149F4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E855436A2A6D5F1D0042B4D2 /* CharacterFilter */,
 				E8BD5A392A6CC8D2008B61F4 /* CharacterDetail */,
 				E8D78D7E2A6C7A0F007149F4 /* CharacterList */,
 			);
@@ -674,16 +734,20 @@
 				E8BD5A402A6CC912008B61F4 /* CharacterDetailViewController.swift in Sources */,
 				E8D78D8D2A6C8E50007149F4 /* UIColorExtension.swift in Sources */,
 				E8D78D8A2A6C895B007149F4 /* CharacterListViewModel.swift in Sources */,
+				E85543742A6D60F00042B4D2 /* TextFieldComponent.swift in Sources */,
 				E8D78D6F2A6C6AFB007149F4 /* ErrorCustom.swift in Sources */,
 				E8D78D7A2A6C74F9007149F4 /* CharacterInfoResponse.swift in Sources */,
 				E8D78D7C2A6C75FB007149F4 /* BrieflyLocationResponse.swift in Sources */,
+				E85543762A6D711D0042B4D2 /* CharacterFilterViewController.swift in Sources */,
 				E8D78D722A6C6C67007149F4 /* HttpStatusCode.swift in Sources */,
 				E8D78D302A6C59C8007149F4 /* SceneDelegate.swift in Sources */,
+				E85543782A6D71BC0042B4D2 /* CharacterFilterViewModel.swift in Sources */,
 				E8D78D882A6C8211007149F4 /* CharacterListViewController.swift in Sources */,
 				E8D78D692A6C68AE007149F4 /* AppConstants.swift in Sources */,
 				E8D78D6C2A6C69D0007149F4 /* DataRequestExtension.swift in Sources */,
 				E8D78D862A6C7E84007149F4 /* CharacterCell.swift in Sources */,
 				E8BD5A3E2A6CC8FF008B61F4 /* CharacterDetailView.swift in Sources */,
+				E855436F2A6D5F6C0042B4D2 /* CharacterFilterView.swift in Sources */,
 				E8BD5A422A6CC92F008B61F4 /* CharacterDetailViewModel.swift in Sources */,
 				E8D78D782A6C71EC007149F4 /* InformationResponse.swift in Sources */,
 				E8D78D832A6C7A45007149F4 /* CharacterListView.swift in Sources */,

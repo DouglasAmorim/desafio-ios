@@ -34,9 +34,15 @@ class CharacterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        self.configureNavigationBar()
     }
     
     // MARK: Private Methods
+    private func configureNavigationBar() {
+        navigationController?.isNavigationBarHidden = false
+        self.title = NSLocalizedString("CHARACTER_DETAIL_TITLE", comment: "")
+    }
+    
     private func configureView() {
         guard let character = self.character else {
             navigationController?.popViewController(animated: false)

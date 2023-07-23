@@ -31,11 +31,21 @@ class CharacterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
         self.configureTableView()
         self.getCharacterList()
     }
     
     // MARK: Private Methods
+    private func configureNavigationBar() {
+        navigationController?.isNavigationBarHidden = false
+        self.title = NSLocalizedString("CHARACTER_TITLE", comment: "")
+        
+        let barButtonItem = UIBarButtonItem(title: NSLocalizedString("FILTER", comment: ""), style: .plain, target: self, action: #selector(filterTapped))
+        
+        navigationItem.rightBarButtonItem = barButtonItem
+    }
+    
     private func configureTableView() {
         self.characterListView.tableView.delegate = self
         self.characterListView.tableView.dataSource = self
@@ -44,8 +54,8 @@ class CharacterListViewController: UIViewController {
     }
     
     private func getCharacterList(page: Int = 1) {
-        
         guard let viewModel = viewModel else { return }
+        
         viewModel.getCharacterList(page: page, { result in
             var page: Int = page
             
@@ -69,7 +79,6 @@ class CharacterListViewController: UIViewController {
                 // TODO: Tratar cenario de erro
                 break
             }
-            
         })
     }
     
@@ -78,6 +87,18 @@ class CharacterListViewController: UIViewController {
         let characterDetailViewController = CharacterDetailViewController(character: character, viewModel: characterDetailViewModel)
         characterDetailViewController.modalPresentationStyle = .overFullScreen
         navigationController?.pushViewController(characterDetailViewController, animated: true)
+    }
+    
+    private func openCharacterFilter() {
+        let characterFilterViewModel = CharacterFilterViewModel(characterService: CharacterService())
+        let characterFilterViewController = CharacterFilterViewController(viewModel: characterFilterViewModel)
+        
+        characterFilterViewController.modalPresentationStyle = .overFullScreen
+        navigationController?.pushViewController(characterFilterViewController, animated: true)
+    }
+    
+    @objc private func filterTapped() {
+        self.openCharacterFilter()
     }
 }
 
@@ -96,7 +117,6 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
             // TODO: Use SAFE
             let character = characters[indexPath.row]
                   
-            // TODO: Externalizar Strings
             let characterName = (character.getName() != "") ? character.getName() ?? NSLocalizedString("UNKNOWN", comment: "") : NSLocalizedString("UNKNOWN", comment: "")
             let attributedText = NSAttributedString(string: characterName, attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.black])
             
@@ -110,8 +130,7 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
                               
                               cell.setupCell(characterImage: image, characterAttributedText: attributedText)
                           }
-                    }
-                    catch {
+                    } catch {
                         // error
                     }
                 }

@@ -20,7 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = CharacterListViewController(viewModel: viewModel)
         
         let navigationController = UINavigationController()
-         navigationController.pushViewController(viewController, animated: false)
+        
+        let navigationBarAppearence = UINavigationBarAppearance()
+        navigationBarAppearence.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22), NSAttributedString.Key.foregroundColor: UIColor.black]
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearence
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearence
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearence
+        
+        navigationController.pushViewController(viewController, animated: false)
         
         window.rootViewController = navigationController
         self.window = window
