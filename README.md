@@ -100,4 +100,4 @@ Aplicativo não suporta apenas o modo *Cabeça para baixo*. Entende-se que esse 
 
 
 ## Pontos ainda a serem implementados
-- Loading depois de cada requisição (para o usuário ter um feedback visual quando ao carregamento)
+- teste unitario

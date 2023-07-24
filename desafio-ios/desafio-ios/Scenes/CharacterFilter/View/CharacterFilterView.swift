@@ -14,6 +14,8 @@ protocol CharacterFilterViewProtocol: AnyObject {
 
 class CharacterFilterView: UIView {
     // MARK: Private Attributes
+    lazy var loadingView = UIActivityIndicatorView.init(style: .medium)
+    
     private let nameTextField: TextFieldComponent = {
         let textField = TextFieldComponent()
         
@@ -50,28 +52,33 @@ class CharacterFilterView: UIView {
     // MARK: Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.configureLayout()
+        self.setupLayout()
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.configureLayout()
+        self.setupLayout()
     }
     
     // MARK: Private Methods
-    private func configureLayout() {
+    private func setupLayout() {
         self.backgroundColor = .white
-        self.addSubviews()
-        self.configureConstraints()
+        self.setupSubviews()
+        self.setupConstraints()
     }
     
-    private func addSubviews() {
+    private func setupSubviews() {
+        self.loadingView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.nameTextField)
         self.addSubview(self.collectionView)
         self.addSubview(self.filterButton)
+        self.addSubview(self.loadingView)
     }
     
-    private func configureConstraints() {
+    private func setupConstraints() {
+        self.loadingView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.loadingView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
         self.nameTextField.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
         self.nameTextField.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 24).isActive = true
         self.nameTextField.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -24).isActive = true

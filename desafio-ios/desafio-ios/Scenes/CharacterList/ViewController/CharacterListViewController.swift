@@ -36,10 +36,23 @@ class CharacterListViewController: UIViewController {
         super.viewDidLoad()
         self.configureNavigationBar()
         self.configureTableView()
+        self.setupBind()
         self.getCharacterList()
     }
     
     // MARK: Private Methods
+    private func setupBind() {
+        self.viewModel?.loading.bind({ value in
+            if value {
+                self.characterListView.loadingView.startAnimating()
+                self.characterListView.loadingView.isHidden = false
+            } else {
+                self.characterListView.loadingView.stopAnimating()
+                self.characterListView.loadingView.isHidden = true
+            }
+        })
+    }
+    
     private func configureNavigationBar() {
         navigationController?.isNavigationBarHidden = false
         self.title = NSLocalizedString("CHARACTER_TITLE", comment: "")

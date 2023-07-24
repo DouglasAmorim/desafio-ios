@@ -59,6 +59,7 @@ final class CharacterListViewModelTest: XCTestCase {
             viewModel.getCharacterList({ response in
                 switch response {
                 case .success(let characterResponse):
+                    XCTAssertEqual(viewModel.loading.value, false)
                     XCTAssertEqual(mockCharacterResonse, characterResponse)
                     
                 case .failure(let erro):

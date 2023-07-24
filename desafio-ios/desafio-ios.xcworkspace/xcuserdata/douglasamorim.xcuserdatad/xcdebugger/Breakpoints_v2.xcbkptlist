@@ -46,9 +46,9 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/View/CharacterFilterView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "addSubviews()"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "setupSubviews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +62,9 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/View/CharacterFilterView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "configureConstraints()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setupConstraints()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,8 +94,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "getCharacterFilterList(characterFilter:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "getCharacterFilterList(characterFilter:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "getCharacterFilterList(characterFilter:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "tapFilterButton()"
             landmarkType = "7">
             <Locations>
@@ -205,8 +205,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "tapFilterButton()"
             landmarkType = "7">
             <Locations>
@@ -253,8 +253,8 @@
             filePath = "desafio-ios/Scenes/CharacterFilter/ViewController/CharacterFilterViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "finishedFilterCharacters()"
             landmarkType = "7">
          </BreakpointContent>
@@ -333,8 +333,8 @@
             filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -349,8 +349,8 @@
             filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "tableView(_:heightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -365,8 +365,8 @@
             filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -381,8 +381,8 @@
             filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -433,6 +433,102 @@
             endingLineNumber = "87"
             landmarkName = "testGetCharacterList()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82A125C0-028F-41AE-9B4C-BCE8D8653CFC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "setupBind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82A125C0-028F-41AE-9B4C-BCE8D8653CFC - d1a86d193e316838"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in desafio_ios.CharacterListViewController.setupBind() -&gt; ()"
+                  moduleName = "desafio-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "82A125C0-028F-41AE-9B4C-BCE8D8653CFC - d1a86d193e316838"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in desafio_ios.CharacterListViewController.setupBind() -&gt; ()"
+                  moduleName = "desafio-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "779A7524-E9C8-4E6C-91A9-07799DBE6554"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setupBind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "779A7524-E9C8-4E6C-91A9-07799DBE6554 - d1a86d193e316b9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in desafio_ios.CharacterListViewController.setupBind() -&gt; ()"
+                  moduleName = "desafio-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "779A7524-E9C8-4E6C-91A9-07799DBE6554 - d1a86d193e316b9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in desafio_ios.CharacterListViewController.setupBind() -&gt; ()"
+                  moduleName = "desafio-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

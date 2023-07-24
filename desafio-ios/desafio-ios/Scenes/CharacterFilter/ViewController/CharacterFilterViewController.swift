@@ -43,10 +43,23 @@ class CharacterFilterViewController: UIViewController {
         super.viewDidLoad()
         self.configureDelegate()
         self.setupView()
+        self.setupBind()
         self.configureNavigationBar()
     }
     
     // MARK: Private Methods
+    private func setupBind() {
+        self.viewModel?.loading.bind({ value in
+            if value {
+                self.characterFilterView.loadingView.startAnimating()
+                self.characterFilterView.loadingView.isHidden = false
+            } else {
+                self.characterFilterView.loadingView.stopAnimating()
+                self.characterFilterView.loadingView.isHidden = true
+            }
+        })
+    }
+    
     private func configureNavigationBar() {
         navigationController?.isNavigationBarHidden = false
         self.title = NSLocalizedString("CHARACTER_FILTER_TITLE", comment: "")
