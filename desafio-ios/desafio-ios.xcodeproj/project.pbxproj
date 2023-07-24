@@ -12,6 +12,8 @@
 		B1B66461A1E90D902C96B379 /* Pods_desafio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B7BD5F48388AEFCC3F9B74 /* Pods_desafio_ios.framework */; };
 		E811DC042A6ED63F00FFC729 /* MockCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC032A6ED63F00FFC729 /* MockCharacterService.swift */; };
 		E811DC062A6EDAA800FFC729 /* CharacterListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC052A6EDAA800FFC729 /* CharacterListViewModelTest.swift */; };
+		E811DC082A6EDF7C00FFC729 /* CharacterServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC072A6EDF7C00FFC729 /* CharacterServiceTest.swift */; };
+		E811DC0A2A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC092A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift */; };
 		E844B4AD2A6D97F500B48686 /* CharacterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844B4AC2A6D97F500B48686 /* CharacterFilter.swift */; };
 		E85543672A6D51160042B4D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E85543692A6D51160042B4D2 /* Localizable.strings */; };
 		E855436F2A6D5F6C0042B4D2 /* CharacterFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */; };
@@ -30,7 +32,6 @@
 		E8D78D352A6C59C8007149F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D78D332A6C59C8007149F4 /* Main.storyboard */; };
 		E8D78D372A6C59C9007149F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D78D362A6C59C9007149F4 /* Assets.xcassets */; };
 		E8D78D3A2A6C59C9007149F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D78D382A6C59C9007149F4 /* LaunchScreen.storyboard */; };
-		E8D78D452A6C59C9007149F4 /* desafio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D442A6C59C9007149F4 /* desafio_iosTests.swift */; };
 		E8D78D4F2A6C59C9007149F4 /* desafio_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D4E2A6C59C9007149F4 /* desafio_iosUITests.swift */; };
 		E8D78D512A6C59C9007149F4 /* desafio_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D502A6C59C9007149F4 /* desafio_iosUITestsLaunchTests.swift */; };
 		E8D78D602A6C61D4007149F4 /* CustomRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D78D5F2A6C61D4007149F4 /* CustomRequestInterceptor.swift */; };
@@ -79,6 +80,8 @@
 		E7B405E260C86DDA33176683 /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E811DC032A6ED63F00FFC729 /* MockCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterService.swift; sourceTree = "<group>"; };
 		E811DC052A6EDAA800FFC729 /* CharacterListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTest.swift; sourceTree = "<group>"; };
+		E811DC072A6EDF7C00FFC729 /* CharacterServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceTest.swift; sourceTree = "<group>"; };
+		E811DC092A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewModelTest.swift; sourceTree = "<group>"; };
 		E844B4AC2A6D97F500B48686 /* CharacterFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilter.swift; sourceTree = "<group>"; };
 		E85543682A6D51160042B4D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterView.swift; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 		E8D78D392A6C59C9007149F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D78D3B2A6C59C9007149F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D78D402A6C59C9007149F4 /* desafio-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D78D442A6C59C9007149F4 /* desafio_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_iosTests.swift; sourceTree = "<group>"; };
 		E8D78D4A2A6C59C9007149F4 /* desafio-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D78D4E2A6C59C9007149F4 /* desafio_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_iosUITests.swift; sourceTree = "<group>"; };
 		E8D78D502A6C59C9007149F4 /* desafio_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -359,8 +361,9 @@
 		E8D78D432A6C59C9007149F4 /* desafio-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8D78D442A6C59C9007149F4 /* desafio_iosTests.swift */,
 				E811DC052A6EDAA800FFC729 /* CharacterListViewModelTest.swift */,
+				E811DC072A6EDF7C00FFC729 /* CharacterServiceTest.swift */,
+				E811DC092A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift */,
 			);
 			path = "desafio-iosTests";
 			sourceTree = "<group>";
@@ -807,8 +810,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E811DC0A2A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift in Sources */,
 				E811DC062A6EDAA800FFC729 /* CharacterListViewModelTest.swift in Sources */,
-				E8D78D452A6C59C9007149F4 /* desafio_iosTests.swift in Sources */,
+				E811DC082A6EDF7C00FFC729 /* CharacterServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

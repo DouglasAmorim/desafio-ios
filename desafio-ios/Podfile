@@ -4,7 +4,8 @@
 source 'https://cdn.cocoapods.org/'
 
 def shared_pods
-  pod 'Alamofire'
+  pod 'Alamofire', '5.7.1'
+  pod 'Mocker'   , '2.5.5'
 end
 
 target 'desafio-ios' do
