@@ -85,7 +85,6 @@ class CharacterListViewController: UIViewController {
             
             switch result {
             case .success(let characterResponse):
-                
                 if let characters = characterResponse.getCharacterList() {
                     self.characters.append(contentsOf: characters)
                 }
@@ -103,8 +102,7 @@ class CharacterListViewController: UIViewController {
                 }
                 
             case .failure(let erro):
-                // TODO: Tratar cenario de erro
-                break
+                Toast.show(message: erro.localizedDescription, controller: self)
             }
         })
     }

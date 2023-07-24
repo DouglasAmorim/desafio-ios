@@ -86,7 +86,6 @@ class CharacterFilterViewController: UIViewController {
             
             switch result {
             case .success(let characterResponse):
-                
                 if let characters = characterResponse.getCharacterList() {
                     self.charactersFiltred.append(contentsOf: characters)
                 }
@@ -100,11 +99,13 @@ class CharacterFilterViewController: UIViewController {
                     } else {
                         self.finishedFilterCharacters()
                     }
+                } else {
+                    Toast.show(message: "UNKNOWN ERROR", controller: self)
                 }
                 
             case .failure(let erro):
-                // TODO: Tratar cenario de erro
-                break
+                Toast.show(message: erro.localizedDescription, controller: self)
+                
             }
         })
     }

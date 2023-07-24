@@ -15,6 +15,7 @@
 		E811DC082A6EDF7C00FFC729 /* CharacterServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC072A6EDF7C00FFC729 /* CharacterServiceTest.swift */; };
 		E811DC0A2A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC092A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift */; };
 		E811DC0D2A6EF89900FFC729 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC0C2A6EF89900FFC729 /* Observable.swift */; };
+		E811DC102A6EFED200FFC729 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811DC0F2A6EFED200FFC729 /* Toast.swift */; };
 		E844B4AD2A6D97F500B48686 /* CharacterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844B4AC2A6D97F500B48686 /* CharacterFilter.swift */; };
 		E85543672A6D51160042B4D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E85543692A6D51160042B4D2 /* Localizable.strings */; };
 		E855436F2A6D5F6C0042B4D2 /* CharacterFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */; };
@@ -84,6 +85,7 @@
 		E811DC072A6EDF7C00FFC729 /* CharacterServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterServiceTest.swift; sourceTree = "<group>"; };
 		E811DC092A6EE2D900FFC729 /* CharacterFilterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterViewModelTest.swift; sourceTree = "<group>"; };
 		E811DC0C2A6EF89900FFC729 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		E811DC0F2A6EFED200FFC729 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		E844B4AC2A6D97F500B48686 /* CharacterFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilter.swift; sourceTree = "<group>"; };
 		E85543682A6D51160042B4D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E855436E2A6D5F6C0042B4D2 /* CharacterFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 			path = Observable;
 			sourceTree = "<group>";
 		};
+		E811DC0E2A6EFEC800FFC729 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				E811DC0F2A6EFED200FFC729 /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		E85543602A6D50570042B4D2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +279,7 @@
 		E85543702A6D604F0042B4D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E811DC0E2A6EFEC800FFC729 /* Toast */,
 				E855437C2A6D7A130042B4D2 /* CollectionViewCell */,
 				E85543712A6D60C50042B4D2 /* TextField */,
 			);
@@ -802,6 +813,7 @@
 				E811DC0D2A6EF89900FFC729 /* Observable.swift in Sources */,
 				E85543782A6D71BC0042B4D2 /* CharacterFilterViewModel.swift in Sources */,
 				E8D78D882A6C8211007149F4 /* CharacterListViewController.swift in Sources */,
+				E811DC102A6EFED200FFC729 /* Toast.swift in Sources */,
 				E8D78D692A6C68AE007149F4 /* AppConstants.swift in Sources */,
 				E844B4AD2A6D97F500B48686 /* CharacterFilter.swift in Sources */,
 				E8D78D6C2A6C69D0007149F4 /* DataRequestExtension.swift in Sources */,

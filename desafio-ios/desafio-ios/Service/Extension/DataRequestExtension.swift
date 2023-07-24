@@ -14,16 +14,32 @@ extension DataRequest {
              
             // TODO: check if need a specific threatment for each status code
             
-            switch dataResponse.result {
-            case .success(let data):
-                completion(.success(data))
+            guard let statusCode = dataResponse.response?.statusCode else {
+                let erro = ErrorCustom(code: 0, description: "Exception: No Http Status Code")
+                completion(.failure(erro))
+                return
+            }
+            
+            switch statusCode {
+            case HttpStatusCode.successStart.rawValue ... HttpStatusCode.successEnd.rawValue:
+                switch dataResponse.result {
+                case .success(let data):
+                    completion(.success(data))
+                    
+                case .failure(let error):
+                    
+                    let errorCustom = ErrorCustom(message: error.errorDescription, code: error.responseCode ?? 0, description: error.localizedDescription)
+                    
+                    completion(.failure(errorCustom))
+                }
                 
-            case .failure(let error):
-                
-                let errorCustom = ErrorCustom(message: error.errorDescription, code: error.responseCode ?? 0, description: error.localizedDescription)
+            default:
+                // TODO: Decodificar erro
+                let errorCustom = ErrorCustom(message: "Exception:", code: 0, description: "Description")
                 
                 completion(.failure(errorCustom))
             }
+            
         }
     }
 }

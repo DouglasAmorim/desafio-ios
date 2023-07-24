@@ -25,15 +25,12 @@ class CharacterService {
                             result(.success(characterResponse))
                             
                         } catch let error {
-                            // TODO: Create a code for decode error
                             let errorCustom = ErrorCustom(code: 0, description: error.localizedDescription)
                             result(.failure(errorCustom))
                         }
                         
-                        break
                     case .failure(let error):
                         guard let errorCustom = error as? ErrorCustom else {
-                            // TODO: Create a code for parse error
                             let errorCustom = ErrorCustom(code: 0, description: error.localizedDescription)
                             result(.failure(errorCustom))
                             return
@@ -47,7 +44,6 @@ class CharacterService {
         
         } catch let error {
             guard let errorCustom = error as? ErrorCustom else {
-                // TODO: Create a code for parse error
                 let errorCustom = ErrorCustom(code: 0, description: error.localizedDescription)
                 result(.failure(errorCustom))
                 return

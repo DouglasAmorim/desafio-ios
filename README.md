@@ -101,4 +101,6 @@ Aplicativo não suporta apenas o modo *Cabeça para baixo*. Entende-se que esse 
 
 ## Pontos ainda a serem implementados
 - teste unitario
-- Feedback quando erro
+
+## Observações
+Para exibir erros foi utilizado a classe *Toast* criada pela comunidade. Não sendo a melhor forma de exibir um erro ao usuário
