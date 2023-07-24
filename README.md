@@ -31,6 +31,7 @@ O desafio consiste em desenvolver um aplicativo iOS em Swift (ou Objective-C). D
 ## Desenvolvimento do Projeto
 
 O projeto foi desenvolvido seguindo o padrão MVVM e as interfaces foram criadas utilizando ViewCode. Esse padrões foram escolhidos por serem de maior praticidade para o desenvolvedor.
+
 Para a comunicação com a API foi optado pela utilização do *Alamofire*, e criado o interceptor *CustomRequestInterceptor*, nele fica a configuração do *Session* e a implementação do *adapt* e *retrier*. Métodos esses que estão atualmente com a configuração mais simples possível, mas que podem facilmente serem alterados para acrescentar algum cabeçalho a reuisição, e tratar a necessidade ou não de ser refeita a requisição.
 
 ### Tela de Listagem de Personagens (com paginação)
@@ -60,11 +61,13 @@ Ao clicar sobre um personagem da *Lista*, é redirecionado para a tela de *Detal
 ### Filtro de personagens
 
 Na tela de *listagem* dos personagens há um botão *Filter*, posicionado na direita da *Barra de navegação*, onde o usuário pode digitar o *NOME* que deseja filtrar e selecionar uma opção entre *alive* *dead* *unknown*, após isso clicando em *Filter* será retornado para a listagem de personagem com o retorno do filtro realizado pelo o usuário. 
+
 Na tela de *listagem* já filtrada há um botão *Cancel* posicionado na esquerda da *Barra de navegação*, ao clicar a lista completa é exibida novamente. Entende-se que esse requisito foi plenamente atendido.
 
 ### Escrever testes unitários e de UI
 
 Em relação ao UITest, foi criado três testes de navegação, um para testar a troca entre as telas de listagem de personagens, detalhes e filtro, e outros dois para testar a navegação e execução dos filtros.
+
 Em relação a Unit Test, foi criado testes para a *Service* responsável pela montagem da requisição, e outros dois testes para cada *ViewModel*. 
 
 OBS: o teste unitário da *Service* possui um erro após a execução com sucesso do teste, ocorre um crash com a **Session**, que não foi concertado até o presente momento.
