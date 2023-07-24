@@ -14,23 +14,6 @@ extension DataRequest {
              
             // TODO: check if need a specific threatment for each status code
             
-//            guard let statusCode = dataResponse.response?.statusCode else {
-//
-//                let erro = ErrorCustom(code: 0, description: "Exception: No Http Status Code")
-//
-//                completion(.failure(erro))
-//            }
-            //            switch statusCode {
-            //            case HttpStatusCode.successStart ... HttpStatusCode.successEnd:
-            //
-            //
-            //
-            //                completion(dataResponse.result)
-            //
-            //            default:
-            //
-            //            }
-            
             switch dataResponse.result {
             case .success(let data):
                 completion(.success(data))
