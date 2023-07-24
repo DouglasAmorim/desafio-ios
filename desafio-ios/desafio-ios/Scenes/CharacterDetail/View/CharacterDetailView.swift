@@ -196,7 +196,7 @@ class CharacterDetailView: UIView {
     }
     
     // MARK: Public Methods
-    func setupView(characterImage: UIImage,
+    func setupView(characterImage: UIImage? = nil,
                    nameAttributedText: NSAttributedString,
                    statusAttributedText: NSAttributedString,
                    speciesAttributedText: NSAttributedString,
@@ -205,7 +205,10 @@ class CharacterDetailView: UIView {
                    originAttributedText: NSAttributedString,
                    locationAttributedText: NSAttributedString) {
         
-        self.characterImageView.image = characterImage
+        if let characterImage = characterImage {
+            self.characterImageView.image = characterImage
+        }
+        
         self.characterNameLabel.attributedText = nameAttributedText
         self.characterStatusLabel.attributedText = statusAttributedText
         self.characterSpeciesLabel.attributedText = speciesAttributedText

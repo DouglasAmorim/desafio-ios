@@ -89,7 +89,15 @@ class CharacterDetailViewController: UIViewController {
                       }
                 } catch {
                     // TODO: HANDLE ERROR
-                    self.navigationController?.popViewController(animated: false)
+                    DispatchQueue.main.async {
+                        self.characterDetailView.setupView(nameAttributedText: nameAttributedText,
+                                                           statusAttributedText: statusAttributedText,
+                                                           speciesAttributedText: speciesAttributedText,
+                                                           typeAttributedText: typeAttributedText,
+                                                           genderAttributedText: genderAttributedText,
+                                                           originAttributedText: originAttributedText,
+                                                           locationAttributedText: locationAttributedText)
+                    }
                 }
             }
         }
