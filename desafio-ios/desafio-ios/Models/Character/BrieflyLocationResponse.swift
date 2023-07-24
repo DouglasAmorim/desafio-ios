@@ -29,4 +29,12 @@ class BrieflyLocationResponse: Codable, Equatable {
     func getUrl() -> String? {
         return url
     }
+
+    func setName(name: String) {
+        self.name = name
+    }
+    
+    func setUrl(url: String) {
+        self.url = url
+    }
 }

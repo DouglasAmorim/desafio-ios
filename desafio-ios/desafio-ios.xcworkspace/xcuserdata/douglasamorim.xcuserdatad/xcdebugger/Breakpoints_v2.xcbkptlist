@@ -103,70 +103,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2F48415B-1703-4B03-B871-151F425CF4AA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "getCharacterList(characterFilter:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2F48415B-1703-4B03-B871-151F425CF4AA - ea586547087c9c51"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;desafio_ios.CharacterResponse, desafio_ios.ErrorCustom&gt;) -&gt; () in desafio_ios.CharacterListViewController.getCharacterList(characterFilter: desafio_ios.CharacterFilter) -&gt; ()"
-                  moduleName = "desafio-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "292">
-               </Location>
-               <Location
-                  uuid = "2F48415B-1703-4B03-B871-151F425CF4AA - ea586547087c9c51"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;desafio_ios.CharacterResponse, desafio_ios.ErrorCustom&gt;) -&gt; () in desafio_ios.CharacterListViewController.getCharacterList(characterFilter: desafio_ios.CharacterFilter) -&gt; ()"
-                  moduleName = "desafio-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/douglasamorim/project/ios/desafio-ios/desafio-ios/desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "872DDEDF-8B05-4D31-A0B7-300F3A93C84A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "getCharacterList(characterFilter:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7DDF88C8-FFE4-4092-94F4-5DCB9D861F0F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -406,38 +342,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16720EF4-0EBC-443F-908A-D80326947DAD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getCharacterList(characterFilter:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00D21231-A314-4C6C-9F3C-796C87A369D5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "getCharacterList(characterFilter:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "54FE3DC4-B673-4A04-B20F-97A693234C31"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -493,8 +397,8 @@
             filePath = "desafio-ios/Scenes/CharacterList/ViewController/CharacterListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

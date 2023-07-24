@@ -151,7 +151,6 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CharacterCell.identifier, for: indexPath) as? CharacterCell {
             
-            // TODO: Use SAFE
             let character = self.listIsFiltered ? self.filteredCharacters[indexPath.row] : characters[indexPath.row]
                   
             let characterName = (character.getName() != "") ? character.getName() ?? NSLocalizedString("UNKNOWN", comment: "") : NSLocalizedString("UNKNOWN", comment: "")

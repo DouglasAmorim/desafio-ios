@@ -29,4 +29,12 @@ class CharacterResponse: Codable, Equatable {
     func getCharacterList() -> [CharacterInfoResponse]? {
         return characterList
     }
+    
+    func setInformationResponse(informationResponse: InformationResponse) {
+        self.informationResponse = informationResponse
+    }
+    
+    func setCharacterList(characterList: [CharacterInfoResponse]) {
+        self.characterList = characterList
+    }
 }

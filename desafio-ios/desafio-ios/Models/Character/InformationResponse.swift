@@ -43,4 +43,20 @@ class InformationResponse: Codable, Equatable {
     func getUrlPreviousPage() -> String? {
         return urlPreviousPage
     }
+    
+    func setItemAmount(itemAmount: Int) {
+        self.itemAmount = itemAmount
+    }
+    
+    func setPageAmount(pageAmount: Int) {
+        self.pageAmount = pageAmount
+    }
+    
+    func setUrlNextPage(nextPage: String?){
+        self.urlNextPage = nextPage
+    }
+    
+    func setUrlPreviousPage(prevPage: String?) {
+        self.urlPreviousPage = prevPage
+    }
 }

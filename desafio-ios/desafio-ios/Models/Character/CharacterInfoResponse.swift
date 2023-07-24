@@ -100,4 +100,52 @@ class CharacterInfoResponse: Codable, Equatable {
     func getCreated() -> String? {
         return created
     }
+    
+    func setId(id: Int) {
+        self.id = id
+    }
+    
+    func setName(name: String) {
+        self.name = name
+    }
+    
+    func setStatus(status: String) {
+        self.status = status
+    }
+    
+    func setSpecies(species: String) {
+        self.species = species
+    }
+    
+    func setType(type: String) {
+        self.type = type
+    }
+    
+    func setGender(gender: String) {
+        self.gender = gender
+    }
+    
+    func setOrigin(origin: BrieflyLocationResponse) {
+        self.origin = origin
+    }
+    
+    func setLocation(location: BrieflyLocationResponse) {
+        self.location = location
+    }
+    
+    func setImage(image: String) {
+        self.image = image
+    }
+
+    func setEpisode(episodes: [String]) {
+        self.episode = episodes
+    }
+    
+    func setUrl(url: String) {
+        self.url = url
+    }
+    
+    func setCreated(created: String) {
+        self.created = created
+    }
 }
