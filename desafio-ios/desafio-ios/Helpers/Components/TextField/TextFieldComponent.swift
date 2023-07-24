@@ -29,7 +29,10 @@ class TextFieldComponent: UIView {
         
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.autocorrectionType = .no
+        textField.addDoneButtonOnKeyboard()
         textField.delegate = self
+        
+        textField.accessibilityIdentifier = "NAME_TEXT_FIELD"
         
         return textField
     }()
@@ -98,6 +101,8 @@ class TextFieldComponent: UIView {
 
 extension TextFieldComponent: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        
         if let text = textField.text {
             self.delegate?.didEndEditing(text: text)
         }

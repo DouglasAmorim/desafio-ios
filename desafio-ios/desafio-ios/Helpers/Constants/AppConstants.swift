@@ -10,5 +10,4 @@ import Foundation
 class AppConstants {
     static let API_BASE = (Bundle.main.infoDictionary!["API_BASE"]) as! String
     static let API_PATH = (Bundle.main.infoDictionary!["API_PATH"]) as! String
-    static let USER_DEFAULTS_KEY = "USER_DEFAULTS_KEY"
 }
