@@ -81,7 +81,7 @@ class CharacterListViewController: UIViewController {
         guard let viewModel = viewModel else { return }
         
         viewModel.getCharacterList(characterFilter: characterFilter, { result in
-            var page: Int =  Int(characterFilter.getPage()) ?? 0
+            var page: Int =  Int(characterFilter.getPage()) ?? 1
             
             switch result {
             case .success(let characterResponse):

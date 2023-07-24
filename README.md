@@ -101,3 +101,4 @@ Aplicativo não suporta apenas o modo *Cabeça para baixo*. Entende-se que esse 
 
 ## Pontos ainda a serem implementados
 - teste unitario
+- Feedback quando erro
