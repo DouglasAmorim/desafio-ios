@@ -99,8 +99,5 @@ OBS: Quando o dispositivo está offline nenhunha imagem é exibida, uma opção 
 Aplicativo não suporta apenas o modo *Cabeça para baixo*. Entende-se que esse requisito foi plenamente atendido.
 
 
-## Pontos ainda a serem implementados
-- teste unitario
-
 ## Observações
 Para exibir erros foi utilizado a classe *Toast* criada pela comunidade. Não sendo a melhor forma de exibir um erro ao usuário
