@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 class CharacterListView: UIView {
-    // MARK: Private Attributes
-    
     // MARK: Public Attributes
     lazy var loadingView = UIActivityIndicatorView.init(style: .medium)
     

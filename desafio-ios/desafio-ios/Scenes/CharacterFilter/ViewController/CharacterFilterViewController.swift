@@ -81,7 +81,9 @@ class CharacterFilterViewController: UIViewController {
     private func getCharacterFilterList(characterFilter: CharacterFilter = CharacterFilter()) {
         guard let viewModel = viewModel else { return }
         
-        viewModel.getCharacterFilterList(characterFilter: characterFilter, { result in
+        viewModel.getCharacterFilterList(characterFilter: characterFilter, { [weak self] result in
+            guard let self = self else { return }
+            
             var page: Int =  Int(characterFilter.getPage()) ?? 1
             
             switch result {
@@ -105,7 +107,6 @@ class CharacterFilterViewController: UIViewController {
                 
             case .failure(let erro):
                 Toast.show(message: erro.localizedDescription, controller: self)
-                
             }
         })
     }

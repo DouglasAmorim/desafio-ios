@@ -12,6 +12,9 @@ import XCTest
 import Alamofire
 import Mocker
 
+/// Disabled test - Error in "Session"
+///
+
 final class CharacterServiceTest: XCTestCase {
     private var configuration = URLSessionConfiguration.default
     private var session: Session = Session()

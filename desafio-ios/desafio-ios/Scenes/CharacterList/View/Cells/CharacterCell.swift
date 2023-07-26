@@ -12,6 +12,11 @@ class CharacterCell: UITableViewCell {
     static let identifier = "CharacterCell"
     static let HEIGHT: CGFloat = 80
     
+    override func prepareForReuse() {
+        self.characterImageView.image = nil
+        self.characterNameLabel.text = nil
+    }
+    
     // MARK: Private Attributes
     private let characterImageView: UIImageView = {
         let imageView = UIImageView()
