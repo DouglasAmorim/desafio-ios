@@ -8,7 +8,7 @@
 import XCTest
 
 final class desafio_iosUITests: XCTestCase {
-    let app = XCUIApplication()
+    let app = XCUIApplication(bundleIdentifier: "douglasAmorim.desafio-ios")
     
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -31,8 +31,8 @@ final class desafio_iosUITests: XCTestCase {
         
         app.toolbars.buttons["Done"].tap()
         
-        let filterPredicate = NSPredicate(format: "label beginswith 'FILTER'")
-        app.buttons.element(matching: filterPredicate).tap()
+        let filterButton = app.buttons["FILTER_BUTTON"]
+        filterButton.tap()
         
         sleep(10)
         

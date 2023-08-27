@@ -9,6 +9,7 @@ import Foundation
 
 class MockCharacterService: CharacterService {
     override func getCharacterList(characterFilter: CharacterFilter = CharacterFilter(), _ result: @escaping (Result<CharacterResponse, ErrorCustom>) -> Void) {
+        
         let mockInformationResponse = InformationResponse()
         mockInformationResponse.setItemAmount(itemAmount: 66)
         mockInformationResponse.setPageAmount(pageAmount: 6)

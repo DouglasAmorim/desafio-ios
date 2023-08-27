@@ -30,7 +30,7 @@ class CharacterFilterView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(NSLocalizedString("FILTER_BUTTON", comment: ""), for: .normal)
         button.addTarget(self, action: #selector(tapFilterButton), for: .touchUpInside)
-        
+        button.accessibilityIdentifier = "FILTER_BUTTON"
         return button
     }()
     
