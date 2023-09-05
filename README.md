@@ -1,14 +1,14 @@
 # Desafio - iOS
 
-Este projeto é a resolução para o desafio proposto pela empresa ### para posição de DEV IOS Sr.
+Este projeto tem como objetivo aperfeiçoar conhecimentos sobre ViewCode (UIKit), integração com APIs (usando Alamofire), MVVM, testes unitários e testes de UI
 
-## O que é o Desafio ?
+## O que é o aplicativo ?
 
-O desafio consiste em desenvolver um aplicativo iOS em Swift (ou Objective-C). Deve-se consumir uma API pública do Rick & Morty.
+O aplicativo consiste em consumir uma API pública do Rick & Morty.
 
-### Requisitos obrigatórios: 
+### Requisitos: 
 
-- Tela de listagem de personagens (com paginação)
+- Tela de listagem de personagens
 - Tela de detalhes do personagem
 - Filtro de personagens
 - Escrever testes unitários e de UI
@@ -34,23 +34,6 @@ O projeto foi desenvolvido seguindo o padrão MVVM e as interfaces foram criadas
 
 Para a comunicação com a API foi optado pela utilização do *Alamofire*, e criado o interceptor *CustomRequestInterceptor*, nele fica a configuração do *Session* e a implementação do *adapt* e *retrier*. Métodos esses que estão atualmente com a configuração mais simples possível, mas que podem facilmente serem alterados para acrescentar algum cabeçalho a reuisição, e tratar a necessidade ou não de ser refeita a requisição.
 
-### Tela de Listagem de Personagens (com paginação)
-
-Não ficou entendido ao certo o que 'paginação' exigia. Foi percebido que o endpoint */character* retorna uma lista sempre separada por paginas, portanto a seguinte logica foi aplicada para consumir todas as 'paginas' do endpoint
-
-```
-if let pageAmount = characterResponse.getInformationResponse()?.getPageAmount() {
-    if page < pageAmount {
-        page += 1
-        characterFilter.setPage(page: String(page))
-        self.getCharacterList(characterFilter: characterFilter)
-        
-    } else {
-        self.refreshControl.endRefreshing()
-        self.characterListView.tableView.reloadData()
-    }
-}
-```
 
 A segunda interpretação foi que a tela da listagem deveria ter 'paginas', e, de alguma maneira ao chegar ao final da primeira lista o usuário deveria interagir para que as demais fossem carregadas. Essa segunda interpretação não foi implementada no projeto.
 
@@ -96,7 +79,7 @@ OBS: Quando o dispositivo está offline nenhunha imagem é exibida, uma opção 
 
 ### Suporte a rotação de tela (orientações portrait e landscape)
 
-Aplicativo não suporta apenas o modo *Cabeça para baixo*. Entende-se que esse requisito foi plenamente atendido.
+Aplicativo não suporta apenas o modo *Cabeça para baixo*.
 
 
 ## Observações
